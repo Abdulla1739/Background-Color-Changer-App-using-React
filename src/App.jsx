@@ -1,16 +1,13 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 
 function App() {
   const bGroundBlack = () => {
-    const bgDiv = document.getElementById("bg");
+    const bgDiv = document.body;
     const output = document.getElementById("output");
     bgDiv.style.backgroundColor = "#101820";
     bgDiv.style.color = "#FEE715";
     output.innerHTML = `
-      <div  class='container border border-success rounded p-5'>
+      <div  class='container border border-success rounded p-3 p-md-5'>
         <h1>"Sun on Midnight"</h1>
         <p>
           <strong>Yellow sparks on black</strong>, a message alight.<br />
@@ -22,12 +19,12 @@ function App() {
     `;
   };
   const bGroundBlue = () => {
-    const bgDiv = document.getElementById("bg");
+    const bgDiv = document.body;
     const output = document.getElementById("output");
     bgDiv.style.backgroundColor = "#00246B";
     bgDiv.style.color = "#FBEAEB";
     output.innerHTML = `
-      <div  class='container border border-success rounded p-5'>
+      <div  class='container border border-success rounded p-3 p-md-5'>
         <h1>"Cotton Candy Clouds"</h1>
         <p>
           <strong>Soft pink whispers</strong>, on a summer sky,<br />
@@ -39,12 +36,12 @@ function App() {
     `;
   };
   const bGroundGreen = () => {
-    const bgDiv = document.getElementById("bg");
+    const bgDiv = document.body;
     const output = document.getElementById("output");
     bgDiv.style.backgroundColor = "#31473A";
     bgDiv.style.color = "#CB0000";
     output.innerHTML = `
-      <div  class='container border border-success rounded p-5'>
+      <div  class='container border border-success rounded p-3 p-md-5'>
         <h1>"Heartwood Fire"</h1>
         <p>
           <strong>Crimson whispers</strong>, on emerald deep,<br />
@@ -56,12 +53,12 @@ function App() {
     `;
   };
   const bGroundGray = () => {
-    const bgDiv = document.getElementById("bg");
+    const bgDiv = document.body;
     const output = document.getElementById("output");
     bgDiv.style.backgroundColor = "#735DA5";
     bgDiv.style.color = "#FFBB00";
     output.innerHTML = `
-      <div  class='container border border-success rounded p-5'>
+      <div  class='container border border-success rounded p-3 p-md-5'>
         <h1>"Twilight's Whisper"</h1>
         <p>
           <strong>Faint whispers on</strong>, twilight's embrace,<br />
@@ -73,12 +70,12 @@ function App() {
     `;
   };
   const bGroundCream = () => {
-    const bgDiv = document.getElementById("bg");
+    const bgDiv = document.body;
     const output = document.getElementById("output");
     bgDiv.style.backgroundColor = "#73605B";
     bgDiv.style.color = "#CEE6F2";
     output.innerHTML = `
-      <div  class='container border border-success rounded p-5'>
+      <div  class='container border border-success rounded p-3 p-md-5'>
         <h1>"Seashell Secrets"</h1>
         <p>
           <strong>Vanilla whispers</strong>, on a canvas of sand,<br />
@@ -98,54 +95,52 @@ function App() {
       <div
         id="bg"
         style={{
-          height: "100vh",
-          scrollbarColor: "transparent",
           width: "100%",
           textAlign: "center",
           alignItems: "center",
           paddingTop: "50px",
         }}
       >
-        <h1>Click your favourite combinations</h1> <br />
-        <div className="text-center d-md-flex justify-content-center align-items-center w-100 pt-2">
+        <h1 class="pe-3 ps-3">Click your favourite combinations</h1> <br />
+        <div className="text-center d-md-flex justify-content-center align-items-center w-100 pt-3 pb-3">
           <button
             onClick={bGroundHome}
-            class="btn btn-outline-danger me-3 mb-3"
+            class="btn btn-outline-danger me-3 mb-2"
           >
             Home
           </button>
           <button
-            class="me-3 btn btn-outline-warning mb-3"
+            class="me-3 btn btn-outline-warning mb-2"
             onClick={bGroundBlack}
           >
             Black N Yellow
           </button>
           <button
             onClick={bGroundBlue}
-            class="btn btn-outline-primary me-3 mb-3"
+            class="btn btn-outline-primary me-3 mb-2"
           >
             Blue N Pink
           </button>
           <button
             onClick={bGroundGreen}
-            class="btn btn-outline-success me-3 mb-3"
+            class="btn btn-outline-success me-3 mb-2"
           >
             Green N Red
           </button>
           <button
             onClick={bGroundGray}
-            class="btn btn-outline-secondary me-3 mb-3"
+            class="btn btn-outline-secondary me-3 mb-2"
           >
             Periwinkle N Gray
           </button>
-          <button onClick={bGroundCream} class="btn btn-outline-info me-3 mb-3">
+          <button onClick={bGroundCream} class="btn btn-outline-info me-3 mb-2">
             Taupe N Cream
           </button>
         </div>
         <div
           id="output"
           style={{ transition: " 1s ease-in-out" }}
-          className="container"
+          className="container pb-5"
         ></div>
       </div>
     </>
